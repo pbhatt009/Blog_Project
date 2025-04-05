@@ -83,7 +83,7 @@ function Allpost(){
         <div className='flex h-100 items-center justify-center'>
 
         <h1 className="text-2xl font-bold hover:text-gray-500 ">
-             Lgin to see your posts..
+             Login to see your posts..
       </h1>
       </div>
     )
