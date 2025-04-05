@@ -37,19 +37,11 @@ export default function Post() {
     };
 
     return post ? (
+
         <div className="py-8">
             <Container>
-            <div className="w-1/2 md:w-2/3 sm:w-full mx-auto flex justify-center mb-4 relative border rounded-xl p-2">
-
-                {/* <img src="https://cloud.appwrite.io/v1/storage/buckets/67ded83a000bf101df21/files/67ecb954003b4ef88381/view?project=67debe63002aac24fccd&mode=admin" alt="img loading" /> */}
-                    <img 
-                        src={appwriteService.getfilepreview(post.featuredimage)}
-                        alt={post.title}
-                        className="rounded-xl  "
-                    />
-
-                    {isAuthor && (
-                        <div className="absolute right-6 top-6">
+                {isAuthor && (
+                        <div className="relative flex justify-center mb-4">
                             {/* {console.log("post",post.$id)} */}
                             <Link to={`/edit-post/${post.$id}`}>
                                 <Button bgColor="bg-green-500" className="mr-3">
@@ -61,6 +53,22 @@ export default function Post() {
                             </Button>
                         </div>
                     )}
+            
+            <div className="w-2/3 mx-auto flex justify-center mb-4 relative border rounded-xl p-2
+             [@media(max-width:600px)]:w-full  
+
+        
+            ">
+
+
+                {/* <img src="https://cloud.appwrite.io/v1/storage/buckets/67ded83a000bf101df21/files/67ecb954003b4ef88381/view?project=67debe63002aac24fccd&mode=admin" alt="img loading" /> */}
+                    <img 
+                        src={appwriteService.getfilepreview(post.featuredimage)}
+                        alt={post.title}
+                        className="rounded-xl  "
+                    />
+
+                
                 </div>
                 <div className="w-full mb-6">
                     <h1 className="text-2xl font-bold">{post.title}</h1>
