@@ -38,7 +38,7 @@ export default function header(){
         },
      ];
     return(
-       <header className="py-3 w-full shadow bg-gray-700 sticky top-0 z-50 " >
+       <header className="py-3 w-full shadow bg-gray-700 sticky top-0 z-50 overflow-auto " >
   <Container>
   <nav className="flex">
     <div className="mr-4 [@media(max-width:600px)]:hidden">
